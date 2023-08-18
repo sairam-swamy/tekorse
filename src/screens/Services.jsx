@@ -1,5 +1,6 @@
 import React from "react";
 import ServiceCard from "../components/ServiceCard";
+import { servicesData } from "../utils/servicesCardData";
 import styled from "styled-components";
 
 const Services = () => {
@@ -20,15 +21,14 @@ const Services = () => {
         </div>
       </div>
       <div className="services-list-container">
-        <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
+        {servicesData.map(({ title, imgSrc, description }, id) => (
+          <ServiceCard
+            key={id}
+            title={title}
+            imgSrc={imgSrc}
+            description={description}
+          />
+        ))}
       </div>
     </ServicesContainer>
   );
@@ -91,7 +91,6 @@ const ServicesContainer = styled.div`
     }
   }
   .services-list-container {
-    background-color: red;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
