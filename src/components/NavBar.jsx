@@ -28,6 +28,15 @@ const NavBar = () => {
           onClick={() => setHamBurger(!hamBurger)}
         />
       )}
+      {hamBurger && (
+        <ul className="mobile-nav">
+          <li>Home</li>
+          <li>Products</li>
+          <li>Services</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      )}
     </NavContainer>
   );
 };
@@ -87,6 +96,28 @@ const NavContainer = styled.nav`
   }
   .ham-burger {
     display: none;
+  }
+  .mobile-nav {
+    position: absolute;
+    background-color: #010100;
+    top: 105px;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    li {
+      list-style: none;
+      font-size: 20px;
+      border-bottom: 1px solid #fff;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      color: #fff;
+    }
   }
   @media screen and (max-width: 1024px) {
     .logo {
