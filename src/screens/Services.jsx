@@ -9,7 +9,7 @@ const Services = () => {
       <div className="ellipse"></div>
       <div className="services-heading">
         <div className="header-left">
-          <header>What We Do</header>
+          <header>Our Services</header>
           <p>"The greatest ideas are the simplest." - William Golding</p>
         </div>
         <div className="header-right">
@@ -74,7 +74,7 @@ const ServicesContainer = styled.div`
       align-items: center;
       width: 35%;
       header {
-        font-size: 85px;
+        font-size: 60px;
         font-weight: 400;
       }
     }
@@ -96,5 +96,59 @@ const ServicesContainer = styled.div`
     grid-gap: 1rem;
     place-items: center;
     padding-top: 5rem;
+  }
+  @media screen and (max-width: 1024px) {
+    .ellipse {
+    }
+    .services-heading {
+      flex-direction: column;
+      row-gap: 2rem;
+      .header-left {
+        width: 100%;
+        row-gap: 1rem;
+      }
+      .header-right {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .services-heading {
+      .header-left {
+        header {
+          font-size: 50px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .header-right {
+        p {
+          font-size: 14px;
+          width: 80%;
+        }
+      }
+    }
+    .services-list-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 620px) {
+    .services-list-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @media screen and (max-width: 370px) {
+    .services-heading {
+      .header-left {
+        header {
+          font-size: 40px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
   }
 `;

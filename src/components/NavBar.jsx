@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import "../styles/btnStyles.css";
-import hamBurger from "../assets/Hamburger_MD.svg";
+import { CgMenu, CgClose } from "react-icons/cg";
 
 const NavBar = () => {
+  const [hamBurger, setHamBurger] = useState(false);
+
   return (
     <NavContainer>
       <div className="logo">Tekorse</div>
@@ -15,7 +17,17 @@ const NavBar = () => {
         <li>Contact</li>
       </ul>
       <button className="glow-on-hover">Let's Talk</button>
-      <img className="ham-burger" src={hamBurger} alt="" />
+      {hamBurger ? (
+        <CgClose
+          className="ham-burger"
+          onClick={() => setHamBurger(!hamBurger)}
+        />
+      ) : (
+        <CgMenu
+          className="ham-burger"
+          onClick={() => setHamBurger(!hamBurger)}
+        />
+      )}
     </NavContainer>
   );
 };
@@ -25,7 +37,7 @@ export default NavBar;
 const NavContainer = styled.nav`
   position: sticky;
   top: 0;
-  height: 110px;
+  height: 105px;
   background-color: #010100;
   color: #fff;
   display: flex;

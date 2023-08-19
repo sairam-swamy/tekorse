@@ -19,17 +19,30 @@ const ServiceCardContainer = styled.div`
   align-items: center;
   width: 300px;
   height: 300px;
-  border: 2px solid white;
+
   img {
     height: 100px;
   }
   .title {
     font-size: 28px;
     font-weight: 500;
+    color: #e5e1e1;
   }
   p {
     width: 70%;
     font-size: small;
     text-align: center;
+    color: #bfbfbf;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 280px;
+    height: 280px;
+    img {
+      height: 80px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    width: 300px;
+    height: 300px;
   }
 `;

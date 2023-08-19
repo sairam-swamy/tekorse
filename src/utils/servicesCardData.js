@@ -12,63 +12,63 @@ export const servicesData = [
     id: 1,
     title: "Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      "We transform ideas into visual masterpieces, creating captivating and user-centric designs that leave a lasting impression.",
     imgSrc: design,
   },
   {
     id: 2,
     title: "Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      "Our expert developers craft functional and feature-rich solutions, ensuring your digital presence is both powerful and reliable.",
     imgSrc: development,
   },
   {
     id: 3,
     title: "Marketing",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      "Elevate your brand with our data-driven marketing strategies, tailored to maximize your reach and impact.",
     imgSrc: marketing,
   },
   {
     id: 4,
     title: "Data Science",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      "Unearth valuable insights from your data with our data science expertise, driving informed decisions and growth.",
     imgSrc: dataScience,
   },
   {
     id: 5,
     title: "Cloud Computing",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      "We provide scalable and secure cloud solutions, enabling businesses to innovate, collaborate, and thrive in the digital age",
     imgSrc: cloud,
   },
   {
     id: 6,
     title: "Machine Learning",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      "Leverage the potential of AI with our machine learning solutions, automating tasks and unlocking new opportunities",
     imgSrc: machineLearning,
   },
   {
     id: 7,
     title: "Data Analytics",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      "Transform data into actionable intelligence with our analytics tools, guiding you toward strategic success.",
     imgSrc: dataAnalytics,
   },
   {
     id: 8,
     title: "Servers & Storage",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      "Our optimization ensures seamless performance and reliability in server and storage systems, safeguarding your data.",
     imgSrc: server_storage,
   },
   {
     id: 9,
     title: "IoT (Internet of Things)",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      "Explore our IoT innovations, connecting devices and systems to create smart, efficient solutions for the modern world.",
     imgSrc: iot,
   },
 ];

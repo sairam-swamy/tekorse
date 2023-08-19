@@ -56,9 +56,8 @@ const AboutUsContainer = styled.div`
     margin-left: 10rem;
     position: relative;
     color: #fff;
-    font-size: 70px;
-    font-style: normal;
-    font-weight: 600;
+    font-size: 85px;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: 2.85px;
     img {
