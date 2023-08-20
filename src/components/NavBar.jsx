@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import logo from "../assets/mainLogo.svg";
 import "../styles/btnStyles.css";
 import { CgMenu, CgClose } from "react-icons/cg";
 
@@ -8,15 +9,26 @@ const NavBar = () => {
 
   return (
     <NavContainer>
-      <div className="logo">Tekorse</div>
+      <div className="logo">
+        <img src={logo} alt="Tekorse" />
+      </div>
       <ul className="nav-items">
-        <li>Home</li>
-        <li>Products</li>
-        <li>Services</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#services">Services</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
-      <button className="glow-on-hover">Let's Talk</button>
+      <button className="letsTalk">
+        <a href="#contact">Let's Talk</a>
+      </button>
       {hamBurger ? (
         <CgClose
           className="ham-burger"
@@ -30,11 +42,18 @@ const NavBar = () => {
       )}
       {hamBurger && (
         <ul className="mobile-nav">
-          <li>Home</li>
-          <li>Products</li>
-          <li>Services</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li onClick={() => setHamBurger(!hamBurger)}>
+            <a href="#home">Home</a>
+          </li>
+          <li onClick={() => setHamBurger(!hamBurger)}>
+            <a href="#services">Services</a>
+          </li>
+          <li onClick={() => setHamBurger(!hamBurger)}>
+            <a href="#about">About</a>
+          </li>
+          <li onClick={() => setHamBurger(!hamBurger)}>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       )}
     </NavContainer>
@@ -84,6 +103,10 @@ const NavContainer = styled.nav`
     position: relative;
     z-index: 0;
     transition: all 0.3s ease-in-out;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
 
     cursor: pointer;
     &:hover {
@@ -135,7 +158,10 @@ const NavContainer = styled.nav`
   }
   @media screen and (max-width: 768px) {
     .logo {
-      font-size: 1.5rem;
+      font-size: 1rem;
+      img {
+        width: 100px;
+      }
     }
     .nav-items {
       display: none;
@@ -143,7 +169,7 @@ const NavContainer = styled.nav`
     .ham-burger {
       display: block;
     }
-    .glow-on-hover {
+    .letsTalk {
       display: none;
     }
   }

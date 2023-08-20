@@ -31,7 +31,7 @@ const HeroSection = () => {
   // });
 
   return (
-    <HeroContainer className="">
+    <HeroContainer id="home" className="">
       <img
         src={specular}
         ref={parallaxSpecular.ref}
@@ -129,6 +129,7 @@ const HeroContainer = styled.div`
       font-weight: 500;
       border-radius: 10px;
       border: none;
+      cursor: pointer;
     }
 
     .over-laver {

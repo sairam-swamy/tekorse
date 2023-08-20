@@ -2,20 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import illusSvg from "../assets/illus.svg";
 import aboutUs from "../assets/about_us.png";
-import { useParallax } from "react-scroll-parallax";
 
 const AboutUs = () => {
-  const parallaxText = useParallax({
-    speed: 1,
-    style: {
-      top: "10rem",
-    },
-    scale: [0.7, 1.2],
-  });
   return (
-    <AboutUsContainer>
+    <AboutUsContainer id="about">
       <div className="main">
-        <header ref={parallaxText.ref}>
+        <header>
           Who We Are <img src={illusSvg} alt="" />
         </header>
         <div className="text-container">
@@ -56,7 +48,7 @@ const AboutUsContainer = styled.div`
     margin-left: 10rem;
     position: relative;
     color: #fff;
-    font-size: 85px;
+    font-size: 60px;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 2.85px;

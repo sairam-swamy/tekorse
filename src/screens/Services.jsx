@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Services = () => {
   return (
-    <ServicesContainer>
+    <ServicesContainer id="services">
       <div className="ellipse"></div>
       <div className="services-heading">
         <div className="header-left">

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import logo from "../assets/mainLogo.svg";
 import {
   AiFillLinkedin,
   AiFillInstagram,
@@ -9,7 +10,7 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const Contact = () => {
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <div className="ellipse"></div>
       <div className="container">
         <div className="header-part">
@@ -25,14 +26,36 @@ const Contact = () => {
         </div>
         <div className="bottom">
           <div className="left">
-            <header>Tekorse</header>
+            <header>
+              <img src={logo} alt="Tekorse" />
+            </header>
             <div className="social">
-              <AiFillTwitterSquare className="icon" />
-              <AiFillLinkedin className="icon" />
-              <AiFillInstagram className="icon" />
+              <a
+                href="https://twitter.com/tekorse"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillTwitterSquare className="icon" />
+              </a>
+              <a
+                href="https://www.instagram.com/tekorsetechnologies/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillInstagram className="icon" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/tekorse-technologies/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillLinkedin className="icon" />
+              </a>
             </div>
             <p className="email">
-              <HiOutlineMail /> info@tekorse.com
+              <a href="mailto:info@tekorse.com">
+                <HiOutlineMail /> info@tekorse.com
+              </a>
             </p>
           </div>
           <div className="address">
