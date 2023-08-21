@@ -51,7 +51,9 @@ const HeroSection = () => {
         alt="img"
       ></img>
       <div className="btn-container">
-        <button className="">Join Now</button>
+        <button className="">
+          <a href="#contact">Let's Talk</a>
+        </button>
         <div className="over-laver"></div>
       </div>
       <div className="blue-shadow"></div>
@@ -124,12 +126,14 @@ const HeroContainer = styled.div`
       width: 170px;
       height: 60px;
       background-color: #4353ff;
-      color: #fff;
       font-size: larger;
       font-weight: 500;
       border-radius: 10px;
       border: none;
       cursor: pointer;
+      a {
+        color: #fff;
+      }
     }
 
     .over-laver {
